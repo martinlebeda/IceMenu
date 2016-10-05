@@ -29,7 +29,28 @@ menuprogreload Podcasts podcast.png 0 filebrowser -dir /home/martin/Mobile/Extra
 ```
 
 # Configuration
-TODO 
+
+## Additional static menu
+
+If exists file `$HOME/.icewm/filebrowser/static`, their content is use as first items, `%s` is changed to current path.
+As local menu is used `.filebrowser/static` in local directory and `.filebrowser_recursive/static` for local directory and all subdirectories.
+
+Example:
+```
+prog "Commander"  /usr/share/doublecmd/doc/en/images/doublecmd.png  doublecmd -T Stažené '%s'
+prog "Terminál"  /usr/share/icons/gnome/16x16/apps/xfce-terminal.png  sakura -r 40 -c 120 --working-directory='%s'
+prog "Thunar"  /usr/share/icons/hicolor/16x16/apps/Thunar.png  thunar '%s'
+```
+
+## Additional dynamic menu
+
+All files in `$HOME/.icewm/filebrowser/`, `.filebrowser/` and `.filebrowser_recursive/` except `static` are used if their names is contained in current directory.
+Then `_` is used as wildchar.
+
+Example:
+- `~/.icewm/filebrowser/.git` used if current directory contain `.git` file or directory
+- `~/.icewm/filebrowser/_mp3` used if current directory contain `*mp3` file or directory
+
 
 # Future plans 
 
