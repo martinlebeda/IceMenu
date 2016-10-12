@@ -2,6 +2,10 @@
 
 Menu generator for browse filesystem for icewm.
 
+# Install
+
+Compile source code or Download compiled binary from [releases](https://github.com/martinlebeda/IceMenu/releases).
+
 # Usage
 
 You can use `--help`:
